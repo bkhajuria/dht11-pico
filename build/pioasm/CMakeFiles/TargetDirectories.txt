@@ -1,0 +1,3 @@
+/home/orangepi/github/dht11-pico/build/pioasm/CMakeFiles/rebuild_cache.dir
+/home/orangepi/github/dht11-pico/build/pioasm/CMakeFiles/edit_cache.dir
+/home/orangepi/github/dht11-pico/build/pioasm/CMakeFiles/pioasm.dir
