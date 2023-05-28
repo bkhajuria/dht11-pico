@@ -1,0 +1,148 @@
+\hypertarget{classDht11}{}\doxysection{Dht11 Class Reference}
+\label{classDht11}\index{Dht11@{Dht11}}
+
+
+DHT11 Sensor Class.  
+
+
+
+
+{\ttfamily \#include $<$dht11-\/pico.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDht11_ac85d71a89b07f5f62776678e80df6639}{Dht11}} (uint pin)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDht11}{Dht11}} class constructor. Initializes GPIO and waits for the sensor to stablize. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDht11_aea342fe54bcdcdeb93ab3a1eb98c6f99}\label{classDht11_aea342fe54bcdcdeb93ab3a1eb98c6f99}} 
+\mbox{\hyperlink{classDht11_aea342fe54bcdcdeb93ab3a1eb98c6f99}{$\sim$\+Dht11}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classDht11}{Dht11}} class destructor. De-\/initialize GPIO. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classDht11_adb51f56ef253ab609e9c77a2a513c4b8}{readT}} (void)
+\begin{DoxyCompactList}\small\item\em Read and retrieve the temperature value from the DHT11 sensor. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classDht11_a503ff881837705ea2ef5ba47f793e1e2}{read\+RH}} (void)
+\begin{DoxyCompactList}\small\item\em Read and retrieve the humidity value from the DHT11 sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDht11_afb8be002e9a3e73df8c50150118a44c9}{read\+RHT}} (double $\ast$temperature, double $\ast$rel\+\_\+humidity)
+\begin{DoxyCompactList}\small\item\em Read both temperature and humidity values from the DHT11 sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+long long \mbox{\hyperlink{classDht11_a29a48dbcdd770bb39420b9777ebfedab}{read}} (void)
+\begin{DoxyCompactList}\small\item\em Private method to read raw data from the DHT11 sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDht11_a9dc952523a19d986d224d399a2f54064}\label{classDht11_a9dc952523a19d986d224d399a2f54064}} 
+uint \mbox{\hyperlink{classDht11_a9dc952523a19d986d224d399a2f54064}{gpio\+Pin}}
+\begin{DoxyCompactList}\small\item\em GPIO pin connected to the DHT11 sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+DHT11 Sensor Class. 
+
+This class provides methods to initialize, read, and retrieve temperature and humidity values from the DHT11 sensor. 
+
+Definition at line 62 of file dht11-\/pico.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDht11_ac85d71a89b07f5f62776678e80df6639}\label{classDht11_ac85d71a89b07f5f62776678e80df6639}} 
+\index{Dht11@{Dht11}!Dht11@{Dht11}}
+\index{Dht11@{Dht11}!Dht11@{Dht11}}
+\doxysubsubsection{\texorpdfstring{Dht11()}{Dht11()}}
+{\footnotesize\ttfamily Dht11\+::\+Dht11 (\begin{DoxyParamCaption}\item[{uint}]{pin }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classDht11}{Dht11}} class constructor. Initializes GPIO and waits for the sensor to stablize. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & GPIO pin number connected to the DHT11 sensor. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file dht11-\/pico.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDht11_a29a48dbcdd770bb39420b9777ebfedab}\label{classDht11_a29a48dbcdd770bb39420b9777ebfedab}} 
+\index{Dht11@{Dht11}!read@{read}}
+\index{read@{read}!Dht11@{Dht11}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily long long Dht11\+::read (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private method to read raw data from the DHT11 sensor. 
+
+\begin{DoxyReturn}{Returns}
+Raw data read from the DHT11 sensor.
+\end{DoxyReturn}
+This method reads the raw data from the DHT11 sensor by sending and receiving pulses to determine the temperature and humidity values. 
+
+Definition at line 23 of file dht11-\/pico.\+cpp.
+
+\mbox{\Hypertarget{classDht11_a503ff881837705ea2ef5ba47f793e1e2}\label{classDht11_a503ff881837705ea2ef5ba47f793e1e2}} 
+\index{Dht11@{Dht11}!readRH@{readRH}}
+\index{readRH@{readRH}!Dht11@{Dht11}}
+\doxysubsubsection{\texorpdfstring{readRH()}{readRH()}}
+{\footnotesize\ttfamily double Dht11\+::read\+RH (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Read and retrieve the humidity value from the DHT11 sensor. 
+
+\begin{DoxyReturn}{Returns}
+Humidity value read from the DHT11 sensor, or TRANSMISSION\+\_\+\+ERROR if there is a transmission error.
+\end{DoxyReturn}
+This method reads the humidity value from the DHT11 sensor and returns it as a double value. If there is a transmission error, TRANSMISSION\+\_\+\+ERROR is returned. 
+
+Definition at line 100 of file dht11-\/pico.\+cpp.
+
+\mbox{\Hypertarget{classDht11_afb8be002e9a3e73df8c50150118a44c9}\label{classDht11_afb8be002e9a3e73df8c50150118a44c9}} 
+\index{Dht11@{Dht11}!readRHT@{readRHT}}
+\index{readRHT@{readRHT}!Dht11@{Dht11}}
+\doxysubsubsection{\texorpdfstring{readRHT()}{readRHT()}}
+{\footnotesize\ttfamily void Dht11\+::read\+RHT (\begin{DoxyParamCaption}\item[{double $\ast$}]{temperature,  }\item[{double $\ast$}]{rel\+\_\+humidity }\end{DoxyParamCaption})}
+
+
+
+Read both temperature and humidity values from the DHT11 sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em temperature} & Pointer to a double variable to store the temperature value. \\
+\hline
+{\em humidity} & Pointer to a double variable to store the humidity value.\\
+\hline
+\end{DoxyParams}
+This method reads both the temperature and humidity values from the DHT11 sensor and stores them in the provided variables. If there is a transmission error, the values are set to TRANSMISSION\+\_\+\+ERROR. 
+
+Definition at line 111 of file dht11-\/pico.\+cpp.
+
+\mbox{\Hypertarget{classDht11_adb51f56ef253ab609e9c77a2a513c4b8}\label{classDht11_adb51f56ef253ab609e9c77a2a513c4b8}} 
+\index{Dht11@{Dht11}!readT@{readT}}
+\index{readT@{readT}!Dht11@{Dht11}}
+\doxysubsubsection{\texorpdfstring{readT()}{readT()}}
+{\footnotesize\ttfamily double Dht11\+::readT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Read and retrieve the temperature value from the DHT11 sensor. 
+
+\begin{DoxyReturn}{Returns}
+Temperature value read from the DHT11 sensor, or TRANSMISSION\+\_\+\+ERROR if there is a transmission error.
+\end{DoxyReturn}
+This method reads the temperature value from the DHT11 sensor and returns it as a double value. If there is a transmission error, TRANSMISSION\+\_\+\+ERROR is returned. 
+
+Definition at line 87 of file dht11-\/pico.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dht11-pico_8h}{dht11-\/pico.\+h}}\item 
+\mbox{\hyperlink{dht11-pico_8cpp}{dht11-\/pico.\+cpp}}\end{DoxyCompactItemize}

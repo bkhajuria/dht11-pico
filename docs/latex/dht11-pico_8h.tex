@@ -1,0 +1,62 @@
+\hypertarget{dht11-pico_8h}{}\doxysection{dht11-\/pico.h File Reference}
+\label{dht11-pico_8h}\index{dht11-\/pico.h@{dht11-\/pico.h}}
+
+
+DHT11 Sensor Library for Raspberry Pi Pico.  
+
+
+{\ttfamily \#include \char`\"{}pico/stdlib.\+h\char`\"{}}\newline
+Include dependency graph for dht11-\/pico.h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{dht11-pico_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{dht11-pico_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classDht11}{Dht11}}
+\begin{DoxyCompactList}\small\item\em DHT11 Sensor Class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{dht11-pico_8h_a0fde3e7fc31127d7904245793f4b009f}\label{dht11-pico_8h_a0fde3e7fc31127d7904245793f4b009f}} 
+const int \mbox{\hyperlink{dht11-pico_8h_a0fde3e7fc31127d7904245793f4b009f}{THRESHOLD}} = 7
+\begin{DoxyCompactList}\small\item\em Threshold for differentiating between bit 0 and bit 1 during DHT11 data transmission. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{dht11-pico_8h_a57d5c1ac5c2aa3897b98ff9df7e41b22}\label{dht11-pico_8h_a57d5c1ac5c2aa3897b98ff9df7e41b22}} 
+const int \mbox{\hyperlink{dht11-pico_8h_a57d5c1ac5c2aa3897b98ff9df7e41b22}{POLLING\+\_\+\+LIMIT}} = 50
+\begin{DoxyCompactList}\small\item\em Maximum number of polling attempts during DHT11 data transmission. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{dht11-pico_8h_ac1c5dee160750d4b11f7641732761a0d}\label{dht11-pico_8h_ac1c5dee160750d4b11f7641732761a0d}} 
+const int \mbox{\hyperlink{dht11-pico_8h_ac1c5dee160750d4b11f7641732761a0d}{TRANSMISSION\+\_\+\+ERROR}} = -\/999
+\begin{DoxyCompactList}\small\item\em Error value returned when there is a transmission error during DHT11 data reading. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{dht11-pico_8h_ac5e44a6812143748c9b7ccb42a6160ae}\label{dht11-pico_8h_ac5e44a6812143748c9b7ccb42a6160ae}} 
+const long long \mbox{\hyperlink{dht11-pico_8h_ac5e44a6812143748c9b7ccb42a6160ae}{RH\+\_\+\+INT\+\_\+\+MASK}} = 0x\+FF00000000
+\begin{DoxyCompactList}\small\item\em Bit mask to extract the integer part of relative humidity from the raw data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{dht11-pico_8h_a798e552b86154f079501bdea1cbe2dba}\label{dht11-pico_8h_a798e552b86154f079501bdea1cbe2dba}} 
+const long long \mbox{\hyperlink{dht11-pico_8h_a798e552b86154f079501bdea1cbe2dba}{RH\+\_\+\+DEC\+\_\+\+MASK}} = 0x00\+FF000000
+\begin{DoxyCompactList}\small\item\em Bit mask to extract the decimal part of relative humidity from the raw data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{dht11-pico_8h_aa944c79c04cc13e81de67d18fd4af283}\label{dht11-pico_8h_aa944c79c04cc13e81de67d18fd4af283}} 
+const long long \mbox{\hyperlink{dht11-pico_8h_aa944c79c04cc13e81de67d18fd4af283}{TEMP\+\_\+\+INT\+\_\+\+MASK}} = 0x0000\+FF0000
+\begin{DoxyCompactList}\small\item\em Bit mask to extract the integer part of temperature from the raw data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{dht11-pico_8h_ac56de6e85e675fb7dc9f4e2776f89e06}\label{dht11-pico_8h_ac56de6e85e675fb7dc9f4e2776f89e06}} 
+const long long \mbox{\hyperlink{dht11-pico_8h_ac56de6e85e675fb7dc9f4e2776f89e06}{TEMP\+\_\+\+DEC\+\_\+\+MASK}} = 0x000000\+FF00
+\begin{DoxyCompactList}\small\item\em Bit mask to extract the decimal part of temperature from the raw data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{dht11-pico_8h_a875f0b5e52128b3a357de99bb66017a1}\label{dht11-pico_8h_a875f0b5e52128b3a357de99bb66017a1}} 
+const long long \mbox{\hyperlink{dht11-pico_8h_a875f0b5e52128b3a357de99bb66017a1}{CHECKSUM\+\_\+\+MASK}} = 0x00000000\+FF
+\begin{DoxyCompactList}\small\item\em Bit mask to extract the checksum from the raw data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+DHT11 Sensor Library for Raspberry Pi Pico. 
+
+This library provides a set of functions to interface with the DHT11 temperature and humidity sensor on the Raspberry Pi Pico microcontroller. 
