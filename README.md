@@ -9,7 +9,7 @@
 **Documentation:** [Dht11 Class Reference](https://bkhajuria.github.io/dht11-pico/classDht11.html) 
 
 ## Wiring
-![dht11-pico](https://github.com/bkhajuria/dht11-pico/assets/images/wiring_pico_dht11.png)
+![dht11-pico](https://github.com/bkhajuria/dht11-pico/blob/main/assets/images/wiring_pico_dht11.png?raw=true)
 
 ## Using the library
 To use the library, simply add the files `dht11-pico.h` and `dht11-pico.cpp` to your project and use as illustrated in `main.cpp` or refer to the [documentation](https://bkhajuria.github.io/dht11-pico/classDht11.html).
