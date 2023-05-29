@@ -17,12 +17,12 @@ int main() {
     double temperature;
     double rel_humidity;
     while(1){
-    std::cout<<"Temp:"<<dht11_sensor.readT()<<std::endl;
+    std::cout<<"Temp:"<<dht11_sensor.readT()<<" °C"<<std::endl;
     sleep_ms(1000);
-    std::cout<<"RH:"<<dht11_sensor.readRH()<<std::endl;
+    std::cout<<"RH:"<<dht11_sensor.readRH()<<" %"<<std::endl;
     sleep_ms(1000);
     dht11_sensor.readRHT(&temperature, &rel_humidity);
-    std::cout<<"Temp:"<<temperature<<" RH:"<<rel_humidity<<std::endl;
+    std::cout<<"Temp:"<<temperature<<"°C"<<"   RH:"<<rel_humidity<<" %"<<std::endl;
     sleep_ms(1000);
     }
     return 0;

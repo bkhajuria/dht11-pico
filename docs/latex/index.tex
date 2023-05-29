@@ -1,0 +1,46 @@
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+ A simple library written in C++ for reading temperature and humidity data from the DHT11 sensor using the \href{https://www.raspberrypi.com/products/raspberry-pi-pico/}{\texttt{ {\bfseries{Raspberry Pi Pico}}}} microcontroller. It features automatic GPIO initialization and de-\/initialization (during construction and destruction of object), making the usage short, simple and clean.\hypertarget{index_autotoc_md1}{}\doxysubsection{What\textquotesingle{}s included\+:}\label{index_autotoc_md1}
+
+\begin{DoxyEnumerate}
+\item A library to interface the DHT11 sensor using Raspberry Pi Pico. \mbox{[}\mbox{\hyperlink{dht11-pico_8h}{dht11-\/pico.\+h}},\mbox{\hyperlink{dht11-pico_8cpp}{dht11-\/pico.\+cpp}}\mbox{]}
+\item An example program or reading temperature and humidity data from the DHT11 sensor. \mbox{[}main.\+cpp\mbox{]}
+\end{DoxyEnumerate}
+
+{\bfseries{Documentation\+:}} \href{https://bkhajuria.github.io/dht11-pico/classDht11.html}{\texttt{ Dht11 Class Reference}}\hypertarget{index_autotoc_md2}{}\doxysection{Wiring}\label{index_autotoc_md2}
+\hypertarget{index_autotoc_md3}{}\doxysection{Using the library}\label{index_autotoc_md3}
+To use the library, simply add the files {\ttfamily \mbox{\hyperlink{dht11-pico_8h}{dht11-\/pico.\+h}}} and {\ttfamily \mbox{\hyperlink{dht11-pico_8cpp}{dht11-\/pico.\+cpp}}} to your project and use as illustrated in {\ttfamily main.\+cpp} or refer to the \href{https://bkhajuria.github.io/dht11-pico/classDht11.html}{\texttt{ documentation}}.\hypertarget{index_autotoc_md4}{}\doxysection{Build and Run the example program}\label{index_autotoc_md4}
+
+\begin{DoxyItemize}
+\item \href{https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf}{\texttt{ Setup the Pico SDK}} on your system if not already done.
+\item Create a new directory in the same directory as {\ttfamily pico-\/sdk}. Let\textquotesingle{}s name it {\ttfamily pico-\/projects}.
+\item Clone this repository to {\ttfamily pico-\/projects} directory using {\ttfamily git clone \href{https://github.com/bkhajuria/dht11-pico.git}{\texttt{ https\+://github.\+com/bkhajuria/dht11-\/pico.\+git}}}.
+\item Switch to the directory {\ttfamily dht11-\/pico}.
+\item Create a new directory named {\ttfamily build} and switch to it {\ttfamily mkdir build \&\& cd build}.
+\item Run {\ttfamily cmake ..}. Build configuration will be done and build files will be written.
+\item Run {\ttfamily make}. Upon succesful build, target files {\ttfamily dht11-\/pico.\+elf}, {\ttfamily dht11-\/pico.\+uf2} will be generated.
+
+TIP\+: To speed up the build process, use {\ttfamily make -\/j4} or {\ttfamily make -\/j6} depending upon the number of cores available on the system.
+\item Now flash the Pico by connecting it as a USB mass storage device. To do this, press and hold the {\itshape BOOTSEL} button on Pico, connect it to the system via USB and then release the button. (Checkout the \href{https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf}{\texttt{ guide}}).
+\item Once connected, drag and drop the {\ttfamily dht11-\/pico.\+uf2} file to the mass storage device. It will get ejected automatically and the program will start running on Pico. Open the USB Serial on terminal using minicom or pu\+TTY to see the sensor output. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Temp:27.5000 °C}
+\DoxyCodeLine{RH:35.0000 \%}
+\DoxyCodeLine{Temp:27.5000°C   RH:35.0000 \%}
+\DoxyCodeLine{Temp:27.6000 °C}
+\DoxyCodeLine{RH:35.0000 \%}
+\DoxyCodeLine{Temp:27.5000°C   RH:35.0000 \%}
+\DoxyCodeLine{.}
+\DoxyCodeLine{.}
+\DoxyCodeLine{.}
+
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{index_autotoc_md5}{}\doxysection{Contributing}\label{index_autotoc_md5}
+Contributions to this repository are welcome. If you find any issues or have any improvements to suggest, please feel free to create an issue or submit a pull request.\hypertarget{index_autotoc_md6}{}\doxysection{License}\label{index_autotoc_md6}
+This project is licensed under the MIT License. Feel free to use and modify the code as per the terms of the license.\hypertarget{index_autotoc_md7}{}\doxysection{Resources}\label{index_autotoc_md7}
+
+\begin{DoxyItemize}
+\item \href{https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf}{\texttt{ DHT11 Datasheet}}
+\item \href{https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf}{\texttt{ Getting started with Raspberry Pi Pico}} 
+\end{DoxyItemize}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>DHT11 Pico Library - C++ - Raspberry Pi Pico: Main Page</title>
+<title>DHT11 Pico Library - C++ - Raspberry Pi Pico: dht11-pico  [C++]</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,11 +62,62 @@ $(function() {
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">DHT11 Pico Library - C++ - Raspberry Pi Pico Documentation</div>  </div>
+<div class="title">dht11-pico [C++] </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a> A simple library written in C++ for reading temperature and humidity data from the DHT11 sensor using the <a href="https://www.raspberrypi.com/products/raspberry-pi-pico/"><b>Raspberry Pi Pico</b></a> microcontroller. It features automatic GPIO initialization and de-initialization (during construction and destruction of object), making the usage short, simple and clean.</p>
+<h2><a class="anchor" id="autotoc_md1"></a>
+What's included:</h2>
+<ol type="1">
+<li>A library to interface the DHT11 sensor using Raspberry Pi Pico. [<a class="el" href="dht11-pico_8h.html" title="DHT11 Sensor Library for Raspberry Pi Pico.">dht11-pico.h</a>,<a class="el" href="dht11-pico_8cpp.html" title="DHT11 Sensor Library Implementation for Raspberry Pi Pico.">dht11-pico.cpp</a>]</li>
+<li>An example program or reading temperature and humidity data from the DHT11 sensor. [main.cpp]</li>
+</ol>
+<p><b>Documentation:</b> <a href="https://bkhajuria.github.io/dht11-pico/classDht11.html">Dht11 Class Reference</a></p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Wiring</h1>
+<p><img src="https://github.com/bkhajuria/dht11-pico/assets/images/wiring_pico_dht11.png" alt="dht11-pico" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Using the library</h1>
+<p>To use the library, simply add the files <code><a class="el" href="dht11-pico_8h.html" title="DHT11 Sensor Library for Raspberry Pi Pico.">dht11-pico.h</a></code> and <code><a class="el" href="dht11-pico_8cpp.html" title="DHT11 Sensor Library Implementation for Raspberry Pi Pico.">dht11-pico.cpp</a></code> to your project and use as illustrated in <code>main.cpp</code> or refer to the <a href="https://bkhajuria.github.io/dht11-pico/classDht11.html">documentation</a>.</p>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Build and Run the example program</h1>
+<ul>
+<li><a href="https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf">Setup the Pico SDK</a> on your system if not already done.</li>
+<li>Create a new directory in the same directory as <code>pico-sdk</code>. Let's name it <code>pico-projects</code>.</li>
+<li>Clone this repository to <code>pico-projects</code> directory using <code>git clone <a href="https://github.com/bkhajuria/dht11-pico.git">https://github.com/bkhajuria/dht11-pico.git</a></code>.</li>
+<li>Switch to the directory <code>dht11-pico</code>.</li>
+<li>Create a new directory named <code>build</code> and switch to it <code>mkdir build &amp;&amp; cd build</code>.</li>
+<li>Run <code>cmake ..</code>. Build configuration will be done and build files will be written.</li>
+<li><p class="startli">Run <code>make</code>. Upon succesful build, target files <code>dht11-pico.elf</code>, <code>dht11-pico.uf2</code> will be generated.</p>
+<p class="startli">TIP: To speed up the build process, use <code>make -j4</code> or <code>make -j6</code> depending upon the number of cores available on the system.</p>
+</li>
+<li>Now flash the Pico by connecting it as a USB mass storage device. To do this, press and hold the <em>BOOTSEL</em> button on Pico, connect it to the system via USB and then release the button. (Checkout the <a href="https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf">guide</a>).</li>
+<li>Once connected, drag and drop the <code>dht11-pico.uf2</code> file to the mass storage device. It will get ejected automatically and the program will start running on Pico. Open the USB Serial on terminal using minicom or puTTY to see the sensor output. <div class="fragment"><div class="line">Temp:27.5000 °C</div>
+<div class="line">RH:35.0000 %</div>
+<div class="line">Temp:27.5000°C   RH:35.0000 %</div>
+<div class="line">Temp:27.6000 °C</div>
+<div class="line">RH:35.0000 %</div>
+<div class="line">Temp:27.5000°C   RH:35.0000 %</div>
+<div class="line">.</div>
+<div class="line">.</div>
+<div class="line">.</div>
+</div><!-- fragment --></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Contributing</h1>
+<p>Contributions to this repository are welcome. If you find any issues or have any improvements to suggest, please feel free to create an issue or submit a pull request.</p>
+<h1><a class="anchor" id="autotoc_md6"></a>
+License</h1>
+<p>This project is licensed under the MIT License. Feel free to use and modify the code as per the terms of the license.</p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Resources</h1>
+<ul>
+<li><a href="https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf">DHT11 Datasheet</a></li>
+<li><a href="https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf">Getting started with Raspberry Pi Pico</a> </li>
+</ul>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
